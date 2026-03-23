@@ -7,9 +7,10 @@
 body, html {
     width: 100%;
     height: 100%;
-    background-color: #050505;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     font-family: 'Outfit', sans-serif;
+    font-weight: 100;
     overflow: hidden;
 }
 
@@ -21,7 +22,7 @@ body, html {
     text-align: center;
     z-index: 10;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(255,105,180, 0.3);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -35,17 +36,18 @@ body, html {
 
 h1 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 1rem;
     background: linear-gradient(90deg, #FF69B4, #FFA500, #39FF14);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
 }
 
 p {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 100;
     margin-bottom: 2rem;
     opacity: 0.8;
 }
@@ -62,7 +64,7 @@ input {
     border: none;
     background: transparent;
     border-bottom: 2px solid #FF69B4;
-    color: #fff;
+    color: #000;
     outline: none;
     font-family: 'Outfit', sans-serif;
     text-align: center;
@@ -89,6 +91,18 @@ button {
 
 button:hover {
     transform: scale(1.05);
+}
+
+#toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 20;
+    box-shadow: 0 4px 15px rgba(255,105,180, 0.4);
+}
+
+#toggle-btn.hidden {
+    display: none;
 }
 
 #network-canvas {
