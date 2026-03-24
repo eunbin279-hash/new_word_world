@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deconstructed Cell Network</title>
+    <title>Deconstructive Theocentrism Network</title>
+    <!-- Outfit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="ui">
@@ -13,11 +16,30 @@
         <p>Enter a 'Holy' center or concept to begin deconstruction:</p>
         <div class="input-group">
             <input type="text" id="start-word" value="TEMPLE" placeholder="e.g. TEMPLE, GOD, TRUTH">
+            <select id="blend-mode" class="blend-select">
+                <option value="multiply">Multiply (곱하기)</option>
+                <option value="screen">Screen (스크린)</option>
+                <option value="overlay">Overlay (오버레이)</option>
+                <option value="color-dodge">Color Dodge (색상 닷지)</option>
+                <option value="color-burn">Color Burn (색상 번)</option>
+                <option value="difference">Difference (차이)</option>
+                <option value="exclusion">Exclusion (제외)</option>
+                <option value="random">Random (랜덤 혼합)</option>
+            </select>
             <button id="start-btn">Initiate</button>
         </div>
     </div>
-    <button id="toggle-btn" class="hidden">Stop Generation</button>
+    
+    <div id="controls" class="hidden">
+        <button id="toggle-btn" class="icon-btn" title="Pause/Resume">
+            <i class="fas fa-pause"></i>
+        </button>
+        <button id="capture-btn" class="icon-btn" title="Capture Screenshot">
+            <i class="fas fa-camera"></i>
+        </button>
+    </div>
+
     <canvas id="network-canvas"></canvas>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
